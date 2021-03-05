@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>punto 2</title>
+    <script type="text/javascript">
+    var l=11;
+    </script>
+        <style type="text/css">
+        .lu{
+            position: absolute;
+            border:black;
+            height: 38%;
+            width: 40%; 
+            background-color: #FDD8E4;
+            left: 20%; 
+            top: 20%;
+            font-size: 58px;
+            text-align: center;
+            font-family: BEBAS;
+        }
+
+
+    </style>
+</head>
+<body onload="inicio()">
+
+<script>
+function inicio(){
+    setTimeout(decre,2000);
+}
+function decre(){
+    cronometro=setInterval(dismi,1000)
+}
+function dismi(){
+    l=l-1;
+    document.getElementById('cuadro').innerHTML=(l);
+    if (l==0) {
+        clearInterval(cronometro);
+        var t=document.getElementById('cuadro').innerHTML=("acabo el conteo")
+    }
+}
+
+</script>
+    <div id="cuadro" class="lu"><br>Hola a todos</div>
+</body>
+</html>
